@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Your Recipes{% endblock %}</h1>
+    <div class="container">
+        <table class="table table-striped">
+            <tbody>
+                {% for recipe in recipes %}
+                <tr class="recipe">
+                    <td><a href="/recipes/{{ loop.index - 1 }}">{{ recipe.name }} [Rating: {{ recipe.rating }}]</a></td>
+                    <td><a class="btn btn-danger" href="/recipes/{{ loop.index - 1}}/delete" onclick="return confirm('Are you sure? Deleting this recipe cannot be undone...')">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Log In</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Log In</h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissable fade show" role="alert">
+            <span><strong>{{ message }}</strong></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form method="post">
+            <label for="username">Username</label>
+            <br>
+            <input type="text" name="username" placeholder="Username" value="{{ request.form['username'] }}">
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" placeholder="Password" value="{{ request.form['password'] }}">
+            <br>
+            <br>
+            <button class="btn btn-primary ll-btn" type="submit">Log In</button>
+        </form>
+        <br>
+        <a class="btn btn-secondary ll-btn" href="{{ url_for("create_account") }}">Create Account</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
