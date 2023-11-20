@@ -19,4 +19,4 @@ NOTES:
 
 <u>Diagram</u>
 
-![MicroserviceDiagram](https://github.com/MQuillian/CS361/assets/38482544/fc530a22-f4b4-43bc-bf9b-c7a0deb5a17d)
+![MicroserviceDiagram](https://github.com/MQuillian/CS361/assets/38482544/5e04e2a8-9f93-4b2d-acf5-c2f3a5250854)
