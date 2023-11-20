@@ -16,3 +16,7 @@ The cookie name is simply 'cookie' and the value is a JSON string that contains 
 NOTES:
 * The userid value will be a randomized, 12 character alphanumeric string
 * The darkmode value will be whatever value was contained in the query parameter received in the request
+
+<u>Diagram</u>
+
+![MicroserviceDiagram](https://github.com/MQuillian/CS361/assets/38482544/fc530a22-f4b4-43bc-bf9b-c7a0deb5a17d)
