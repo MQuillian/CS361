@@ -10,8 +10,8 @@ NOTES:
 
 <u>Receiving a Response</u>
 To receive the response from the Cookie Microservice, simply check the HTTP response that is sent back after making a request. The cookie may be found in the Set-Cookie portion of the response header.
-The cookie name is simply 'cookie' and the value is a JSON string that contains the userid and darkmode values. An example JSON string is as follows:
-"userid": AjsJgh35has, "darkmode": False
+The cookie name is simply 'cookie' and the value is a JSON string that contains the userId and darkMode values. An example JSON string is as follows:
+"userId": AjsJgh35has, "darkMode": False
 
 NOTES:
 * The userid value will be a randomized, 12 character alphanumeric string
