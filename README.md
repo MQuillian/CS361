@@ -18,8 +18,8 @@ The cookie name is simply 'cookie' and the value is a JSON string that contains 
 "userId": AjsJgh35has, "darkMode": False
 
 NOTES:
-* The userid value will be a randomized, 12 character alphanumeric string
-* The darkmode value will be whatever value was contained in the query parameter received in the request
+* The userId value will be a randomized, 12 character alphanumeric string
+* The darkMode value will be whatever value was contained in the query parameter received in the request
 
 <u>Diagram</u>
 
