@@ -1,4 +1,4 @@
-import random, string, json
+import json, os, random, string
 
 from flask import Flask, make_response, jsonify, request, flash, redirect, url_for, sessions, session
 
@@ -9,10 +9,10 @@ app = Flask(__name__)
 def get_cookie():
     userId = "".join(random.choices(string.ascii_letters + string.digits, k=12))
     darkMode = request.args.get('darkmode')
-    cookieObject = '{"userId": ' + userId + ', "darkMode": ' + darkMode + '}'
 
     res = make_response()
-    res.set_cookie("cookie", cookieObject)
+    res.set_cookie("userId", userId)
+    res.set_cookie("darkMode", darkMode)
 
     return res
 
@@ -21,4 +21,4 @@ if __name__ == '__main__':
     app.secret_key = 'totally secret'
     app.config['SESSION_TYPE'] = 'filesystem'
 
-    app.run(port=8001)
+    app.run(host="0.0.0.0", port=int("8001"))

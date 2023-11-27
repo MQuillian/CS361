@@ -1,0 +1,15 @@
+services:
+  cookie-svc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cookie-svc-img
+  cookie-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    image: cookie-test-img
+    links:
+      - "cookie-svc:cookie-svc"
+    ports:
+      - "8002:8002"
